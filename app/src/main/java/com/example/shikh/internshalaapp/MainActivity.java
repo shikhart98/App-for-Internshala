@@ -12,8 +12,6 @@ import com.example.shikh.internshalaapp.database.DatabaseHelper;
 import com.example.shikh.internshalaapp.database.table.WorkshopListTable;
 import com.example.shikh.internshalaapp.models.workshop;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     SharedPreferences pref = null;

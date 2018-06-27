@@ -1,12 +1,9 @@
 package com.example.shikh.internshalaapp.Adapter;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.shikh.internshalaapp.MainActivity;
 import com.example.shikh.internshalaapp.R;
 import com.example.shikh.internshalaapp.database.DatabaseHelper;
-import com.example.shikh.internshalaapp.database.table.WorkshopListTable;
 import com.example.shikh.internshalaapp.database.table.WorkshopSelectedTable;
 import com.example.shikh.internshalaapp.login;
 import com.example.shikh.internshalaapp.models.workshop;
