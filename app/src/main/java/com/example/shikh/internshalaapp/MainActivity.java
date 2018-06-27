@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     SharedPreferences pref = null;
-    ArrayList<workshop> WS_list;
     DatabaseHelper helper;
     SQLiteDatabase write;
     SQLiteDatabase read;
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        WS_list = new ArrayList<>();
         helper = new DatabaseHelper(this);
         write = helper.getWritableDatabase();
         read = helper.getReadableDatabase();
@@ -80,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
             transaction.replace(R.id.fragmentContainer,new login()).addToBackStack(null).commit();
 
-            pref.edit().putBoolean("loggedin",false).commit();
-            pref.edit().putBoolean("firstrun", false).commit();
+            pref.edit().putBoolean("loggedin",false).apply();
+            pref.edit().putBoolean("firstrun", false).apply();
         }
     }
 }

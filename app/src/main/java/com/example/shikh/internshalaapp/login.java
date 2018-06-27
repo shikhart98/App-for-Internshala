@@ -103,8 +103,8 @@ public class login extends Fragment implements View.OnClickListener {
         } else if (userId == -2) {
             Toast.makeText(getContext(), "Email not registered!", Toast.LENGTH_SHORT).show();
         } else {
-            pref.edit().putInt("userId", userId).commit();
-            pref.edit().putBoolean("loggedin", true).commit();
+            pref.edit().putInt("userId", userId).apply();
+            pref.edit().putBoolean("loggedin", true).apply();
             Toast.makeText(getContext(),"Successfully logged in!",Toast.LENGTH_SHORT).show();
             getFragmentManager().popBackStackImmediate();
         }

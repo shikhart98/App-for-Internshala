@@ -76,8 +76,8 @@ public class dashboard extends Fragment implements View.OnClickListener {
                 if(!pref.getBoolean("loggedin", false)) {
                     getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new login()).addToBackStack(null).commit();
                 } else {
-                    pref.edit().putBoolean("loggedin",false).commit();
-                    pref.edit().putInt("userId",-100).commit();
+                    pref.edit().putBoolean("loggedin",false).apply();
+                    pref.edit().putInt("userId",-100).apply();
                     tv_dash_log_in_out.setText("LOG IN");
                     selectedWorkshops = new ArrayList<>();
                     dashboardListAdapter adapter = new dashboardListAdapter(selectedWorkshops,getContext());
