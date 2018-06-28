@@ -57,7 +57,7 @@ public class login extends Fragment implements View.OnClickListener {
                 checkForEmailAndPassword();
                 break;
             case R.id.skip_login:
-                getFragmentManager().popBackStackImmediate();
+                getFragmentManager().popBackStack();
                 break;
             case R.id.login_signup:
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new signUp()).addToBackStack(null).commit();
@@ -103,7 +103,7 @@ public class login extends Fragment implements View.OnClickListener {
             pref.edit().putInt("userId", userId).apply();
             pref.edit().putBoolean("loggedin", true).apply();
             Toast.makeText(getContext(),"Successfully logged in!",Toast.LENGTH_SHORT).show();
-            getFragmentManager().popBackStackImmediate();
+            getFragmentManager().popBackStack();
         }
 
 

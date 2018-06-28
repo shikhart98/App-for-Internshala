@@ -56,7 +56,7 @@ public class signUp extends Fragment implements View.OnClickListener {
                 checkforEmailandPassword();
                 break;
             case R.id.signup_login :
-                getFragmentManager().popBackStackImmediate();
+                getFragmentManager().popBackStack();
                 break;
         }
 
@@ -94,7 +94,7 @@ public class signUp extends Fragment implements View.OnClickListener {
         if(!UserTable.CheckForDuplicates(email,read)) {
             UserTable.insertUser(new user(name, email, password), write);
             Toast.makeText(getContext(),"Successfully registered!",Toast.LENGTH_SHORT).show();
-            getFragmentManager().popBackStackImmediate();
+            getFragmentManager().popBackStack();
         } else {
             Toast.makeText(getContext(),"Email already exist!",Toast.LENGTH_SHORT).show();
         }
