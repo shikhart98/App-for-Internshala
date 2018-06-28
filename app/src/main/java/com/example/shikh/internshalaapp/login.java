@@ -96,7 +96,7 @@ public class login extends Fragment implements View.OnClickListener {
         int userId = UserTable.authenticate(email, password, read);
 
         if (userId == -1) {
-            Toast.makeText(getContext(), "Invalid Email/Password!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Incorrect Password!", Toast.LENGTH_SHORT).show();
         } else if (userId == -2) {
             Toast.makeText(getContext(), "Email not registered!", Toast.LENGTH_SHORT).show();
         } else {
